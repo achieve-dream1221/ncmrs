@@ -1,0 +1,26 @@
+[package]
+name = "ncmrs"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+hex-literal = "1.0.0"
+# AES_ECB
+aes = "0.8.4"
+ecb = { version = "0.1.2", features = ["alloc"] }
+# base64
+base64ct = { version = "1.7.3", features = ["alloc"] }
+# json工具
+serde_json = "1.0.140"
+# ERROR工具
+anyhow = "1.0.98"
+# 异步运行时
+tokio = { version = "1.45.1", features = ["full"] }
+# 下载进度条
+indicatif = "0.17.11"
+# 命令行解析
+clap = { version = "4.5.37", features = ["derive"] }
+clap-verbosity-flag = { version = "3.0.2", default-features = false, features = ["tracing"] }
+# 日志
+tracing = "0.1.41"
+tracing-subscriber = { version = "0.3.19", features = ["local-time"] }
